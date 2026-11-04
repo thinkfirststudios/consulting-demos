@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book an appointment · Spanworth Tax Co. (demo)</title>
+<meta name="description" content="Book an appointment (fictional demo).">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;600;700&family=Cantarell:wght@400;700&family=Anek+Latin:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="demo-marker" aria-label="Demo site">DEMO — ThinkFirst Studios · [Your name here]</div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="utility"><div class="wrap">
+  <span><span class="ph">[CITY]</span>, <span class="ph">[STATE]</span> · <span class="ph">[PHONE — PLACEHOLDER]</span></span>
+  <span><span class="ph">[SEASON HOURS — CONFIRM]</span> / <span class="ph">[OFF-SEASON HOURS — CONFIRM]</span></span>
+  <a href="contact.html#secure-intake">Documents are never sent through this site →</a>
+</div></div>
+<header class="site-header"><div class="wrap">
+  <a class="wordmark" href="index.html">Spanworth Tax Co.<small>Tax preparation, planning and representation</small></a>
+  <nav class="nav" aria-label="Main"><a href="services.html">Services</a><a href="fees.html">Fees</a><a href="pricing-drivers.html">What drives the price</a><a href="the-season.html">The season</a><a href="representation.html">Representation</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
+  <div class="doors"><a class="btn" data-door="appointment" href="appointment.html">Book an appointment</a><a class="btn" data-door="quote" href="quote.html">Get a quote</a></div>
+  <button class="menu-btn" aria-expanded="false" aria-controls="overlay">Menu</button>
+</div></header>
+<div class="overlay" id="overlay" role="dialog" aria-label="Menu"><button class="menu-btn overlay-close">Close</button><a href="services.html">Services</a><a href="fees.html">Fees</a><a href="pricing-drivers.html">What drives the price</a><a href="the-season.html">The season</a><a href="representation.html">Representation</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><div class="doors"><a class="btn" data-door="appointment" href="appointment.html">Book an appointment</a><a class="btn" data-door="quote" href="quote.html">Get a quote</a></div></div>
+<main id="main">
+<section class="page-head"><div class="wrap"><span class="eyebrow">Door one</span><h1>Book an appointment</h1><p>For returning clients, and anyone ready to book.</p><div class="cta-row"><a class="btn" data-door="appointment" href="appointment.html">Book an appointment</a><a class="btn" data-door="quote" href="quote.html">Get a quote</a></div></div></section><section><div class="wrap">
+<dl class="kv section-head"><dt>How long</dt><dd><span class="ph">[HOW LONG — CONFIRM]</span></dd><dt>Who you will see</dt><dd><span class="ph">[WHO YOU WILL SEE — CONFIRM]</span></dd><dt>What to bring</dt><dd><span class="ph">[WHAT TO BRING — CONFIRM, BY CATEGORY]</span></dd><dt>What it costs</dt><dd><span class="ph">[WHAT IT COSTS — CONFIRM]</span></dd><dt>What happens after</dt><dd><span class="ph">[WHAT HAPPENS AFTER — CONFIRM]</span></dd></dl>
+<div class="form-grid"><form class="form" data-demo data-success="appt-ok" novalidate>
+<h2 style="font-size:1.6rem">Pick a time</h2><div class="slots" role="group" aria-label="Appointment slots"><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 1] · [TIME 1]"><span class="day">[DAY 1]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 1]</button><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 1] · [TIME 2]"><span class="day">[DAY 1]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 2]</button><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 2] · [TIME 1]"><span class="day">[DAY 2]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 1]</button><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 2] · [TIME 2]"><span class="day">[DAY 2]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 2]</button><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 3] · [TIME 1]"><span class="day">[DAY 3]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 1]</button><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 3] · [TIME 2]"><span class="day">[DAY 3]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 2]</button><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 4] · [TIME 1]"><span class="day">[DAY 4]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 1]</button><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 4] · [TIME 2]"><span class="day">[DAY 4]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 2]</button><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 5] · [TIME 1]"><span class="day">[DAY 5]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 1]</button><button type="button" class="slot" aria-pressed="false" data-slot="[DAY 5] · [TIME 2]"><span class="day">[DAY 5]</span>[APPOINTMENT SLOT — CONFIRM AVAILABILITY] [TIME 2]</button></div><input type="hidden" id="chosen-slot">
+<h2 style="font-size:1.6rem;margin-top:2rem">Your details</h2>
+<div class="field"><label for="a-nm">Name</label><input id="a-nm" autocomplete="name" required></div>
+<div class="field"><label for="a-em">Email</label><input id="a-em" type="email" autocomplete="email" required></div>
+<div class="field"><label for="a-tel">Phone</label><input id="a-tel" type="tel" autocomplete="tel" required></div>
+<div class="field"><label for="a-rt">Return type</label><select id="a-rt" required><option value="">Choose one</option><option>Individual return</option><option>Small-business return</option><option>Planning</option><option>Representation</option><option>Amended or prior-year return</option><option>Not sure</option></select></div>
+<div class="field"><label for="a-msg">Anything else (optional)</label><textarea id="a-msg"></textarea><p class="hint">No figures, identity numbers or dates of birth, please.</p></div>
+<p class="doc-warning">Documents are never sent through this site or by email. They go through <a href="#secure-intake"><span class="ph">[SECURE DOCUMENT INTAKE — CONFIRM PLATFORM]</span></a> — a separate secure platform.</p>
+<label class="consent"><input type="checkbox" required> <span><span class="ph">[CONSENT WORDING — CONFIRM]</span></span></label>
+<p class="error" tabindex="-1" aria-live="polite"></p><button type="submit" class="btn btn-primary">Book an appointment</button>
+<p class="hint">Submits to <span class="ph">[FORM ENDPOINT — CONFIRM]</span> or hands off to <span class="ph">[SCHEDULER URL — CONFIRM]</span>.</p></form>
+<aside class="summary" aria-live="polite"><span class="label">Your appointment</span><p><strong>Time:</strong> <span id="slot-echo">Not chosen yet</span></p></aside></div>
+<div class="success" id="appt-ok" tabindex="-1"><h2>Request received (demo)</h2><p><span class="ph">[WHAT HAPPENS NEXT — CONFIRM]</span></p></div></div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="foot-grid">
+    <div><h2>Contact</h2><ul><li><span class="ph">[PHONE — PLACEHOLDER]</span></li><li><span class="ph">[EMAIL — PLACEHOLDER]</span></li><li>Season: <span class="ph">[SEASON HOURS — CONFIRM]</span></li><li>Off-season: <span class="ph">[OFF-SEASON HOURS — CONFIRM]</span></li><li><span class="ph">[CITY]</span>, <span class="ph">[STATE]</span></li></ul></div>
+    <div><h2>Pages</h2><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="fees.html">Fees</a></li><li><a href="pricing-drivers.html">What drives the price</a></li><li><a href="the-season.html">The season</a></li><li><a href="representation.html">Representation</a></li><li><a href="about.html">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="appointment.html">Book an appointment</a></li><li><a href="quote.html">Get a quote</a></li></ul></div>
+    <div><h2>Documents and legal</h2><ul><li><a href="fees.html#letter">Engagement letter <span class="ph">[CONFIRM]</span></a></li><li><a href="fees.html">Fee schedule <span class="ph">[CONFIRM, AND THE PERIOD IT IS HONOURED FOR]</span></a></li><li><a href="privacy.html">Privacy (draft)</a></li><li><a href="terms.html">Terms (draft)</a></li></ul>
+    <p class="doc-line" id="secure-intake">Documents are never sent through this site or by email. They go through <a href="#secure-intake"><span class="ph">[SECURE DOCUMENT INTAKE — CONFIRM PLATFORM]</span></a> — a separate secure platform.</p></div>
+  </div>
+  <p class="foot-demo">DEMO — ThinkFirst Studios · [Your name here] · Spanworth Tax Co. is fictional. No real practice, preparer or person is depicted.</p>
+</div></footer>
+<div class="sticky-bar" aria-label="Quick actions"><a class="btn" data-door="appointment" href="appointment.html">Book an appointment</a><a class="btn" data-door="quote" href="quote.html">Get a quote</a><a class="btn" href="tel:+10000000000" aria-label="Call [PHONE — PLACEHOLDER]">Call</a></div>
+<script src="script.js"></script>
+</body>
+</html>

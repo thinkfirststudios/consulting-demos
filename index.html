@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Consulting Demos — ThinkFirst Studios</title>
+<style>
+  :root { --ink: #1C1F22; --muted: #52585E; --line: #E0E2E4; --bg: #F7F7F5; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 56px 20px 40px; }
+  h1 { font-size: clamp(1.8rem, 1.2rem + 2vw, 2.6rem); line-height: 1.15; margin: 0 0 .5rem; letter-spacing: -.02em; }
+  .lede { color: var(--muted); margin: 0 0 1.4rem; max-width: 62ch; }
+  .note { font-size: .95rem; margin: 0 0 2rem; padding: 1rem 1.1rem; background: #fff; border: 1px solid var(--line); border-left: 4px solid #B3261E; border-radius: 10px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  a.card { display: grid; grid-template-columns: 56px 1fr; gap: 16px; align-items: center; padding: 1.1rem 1.2rem; background: #fff; border: 1px solid var(--line); border-radius: 14px; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s; }
+  a.card:hover { border-color: var(--ink); transform: translateY(-2px); }
+  a.card:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+  .sw { width: 56px; height: 56px; border-radius: 10px; }
+  .name { font-weight: 650; font-size: 1.1rem; }
+  .meta { color: var(--muted); font-size: .93rem; }
+  .demo { position: fixed; left: 12px; bottom: 12px; background: var(--ink); color: #fff; font: 600 12px/1.2 system-ui, sans-serif; padding: 8px 12px; border-radius: 4px; }
+  @media (prefers-reduced-motion: reduce) { a.card { transition: none; } a.card:hover { transform: none; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Consulting demo templates</h1>
+  <p class="lede">Three fictional demo sites for advisory, tax and business consulting firms. No real firm or person is depicted. Everything in [BRACKETS] is unconfirmed by design.</p>
+  <p class="note"><strong>Before any client site goes live:</strong> every registration, credential, fee, disclosure and date slot is a visible placeholder that the client and their compliance or licensing contact must confirm. No form on these demos collects an SSN, account number, tax ID or document upload — that requires a [SECURE DOCUMENT INTAKE — CONFIRM PLATFORM] decision first.</p>
+  <ul>
+    <li><a class="card" href="01-financial-advisory/index.html"><span class="sw" style="background:linear-gradient(135deg,#8E3B4E,#6B2A39)"></span><span><span class="name">01 · Carrack Advisory</span><br><span class="meta">Financial advisory · pewter, madder · Wittgenstein + Sarala · includes disclosures.html and the disclosure spine</span></span></a></li>
+    <li><a class="card" href="02-tax-consulting/index.html"><span class="sw" style="background:linear-gradient(135deg,#3E5230,#2A3A20)"></span><span><span class="name">02 · Spanworth Tax Co.</span><br><span class="meta">Tax preparation &amp; consulting · manila, moss · Rokkitt + Cantarell · includes pricing-drivers.html and the season switch</span></span></a></li>
+    <li><a class="card" href="03-business-consulting/index.html"><span class="sw" style="background:linear-gradient(135deg,#C96A1E,#2D2834)"></span><span><span class="name">03 · Drawknife Consulting</span><br><span class="meta">Business consulting · slate, quartz, oxide · Barlow Condensed + Nunito · includes findings.html and the scoping intake</span></span></a></li>
+  </ul>
+</main>
+<div class="demo">DEMO — ThinkFirst Studios · [Your name here]</div>
+</body>
+</html>
