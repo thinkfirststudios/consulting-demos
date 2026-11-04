@@ -1,13 +1,12 @@
 # Photo provenance — 02 (Pexels licence; attribution not required, recorded for provenance)
-| File | Pexels ID | Subject |
-|---|---|---|
-| hero-* | 4185557 | White drawer half open, empty |
-| room-blind-* | 24182748 | White slatted blind |
-| room-office-* | 7677970 | Reflected light on a plain wall |
-| room-chair-* | 3983719 | Wooden chair in an empty arched-window room |
-| room-window-* | 20435869 | Window-frame shadow on a wall with a plant |
-| obj-notebook-* | 472311 | Blank notebook and pen from above |
-| obj-wallet-* | 7958169 | Kraft envelope with a blank card |
-| obj-paper-* | 5420903 | Blank sheet and pen |
-| band-wall-* | 62693 | Light and shadow on a white wall |
-| band-corridor-* | 6208143 | Corridor with raking shadows |
+Every frame was vetted by eye at full size: no legible text or numbers, no logos, no children, no AI imagery.
+
+| File | Pexels ID | Subject | Crop note |
+|---|---|---|---|
+| hero-900/1600/2400 | 1367269 | Two smiling professionals standing in a bright loft office | Cropped at x=2560 of 3000 to remove a red EXIT sign |
+| hero-m-900 | 1367269 | Same, square mobile crop | Same exclusion |
+| desk-* | 7821498 | Preparer and client talking across a wooden desk | Printed page illegible at every size |
+| couple-* | 6963888 | Couple going through paperwork at a kitchen counter | Top and bottom trimmed |
+| senior-* | 8439701 | Older client listening at a dining-table meeting | — |
+| shop-* | 7679730 | Shop owner on a laptop at a clothing-store counter | Cropped at x=2400 of 3000 to remove a labelled shipping box |
+| hand-* | 5439466 | Two men shaking hands in an office | — |

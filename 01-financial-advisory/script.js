@@ -4,13 +4,12 @@
   document.documentElement.classList.add('js');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Header condenses 88px -> 56px past 120px of scroll
+  // Header condenses past 120px; the mobile sticky bar appears once the hero has scrolled away
   var header = document.querySelector('.site-header');
   var hero = document.querySelector('.hero, .page-head');
   var bar = document.querySelector('.sticky-bar');
   function onScroll() {
-    var y = window.scrollY;
-    if (header) header.classList.toggle('condensed', y > 120);
+    if (header) header.classList.toggle('condensed', window.scrollY > 120);
     if (bar && hero) bar.classList.toggle('show', reduce || hero.getBoundingClientRect().bottom < 0);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -21,41 +20,32 @@
   var overlay = document.querySelector('.overlay');
   if (openBtn && overlay) {
     var closeBtn = overlay.querySelector('.overlay-close');
-    openBtn.addEventListener('click', function () {
-      overlay.classList.add('open'); openBtn.setAttribute('aria-expanded', 'true');
-      closeBtn.focus();
-    });
-    closeBtn.addEventListener('click', function () {
-      overlay.classList.remove('open'); openBtn.setAttribute('aria-expanded', 'false'); openBtn.focus();
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && overlay.classList.contains('open')) closeBtn.click();
-    });
+    openBtn.addEventListener('click', function () { overlay.classList.add('open'); openBtn.setAttribute('aria-expanded', 'true'); closeBtn.focus(); });
+    closeBtn.addEventListener('click', function () { overlay.classList.remove('open'); openBtn.setAttribute('aria-expanded', 'false'); openBtn.focus(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('open')) closeBtn.click(); });
   }
 
-  // Reveals: 10px rise + fade, 50ms stagger down a column. Spines and fee tables run once.
-  var targets = document.querySelectorAll('.reveal, .spine, .table-wrap');
+  // Reveals: rise + fade with a short stagger among siblings; the process rail's line draws once
+  var targets = document.querySelectorAll('.reveal, .rail');
   if (reduce || !('IntersectionObserver' in window)) {
     targets.forEach(function (el) { el.classList.add('in'); });
-    document.querySelectorAll('.fee tbody tr').forEach(function (tr) { tr.style.opacity = 1; });
   } else {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         var el = en.target;
-        var sibs = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
-        if (el.classList.contains('reveal')) el.style.transitionDelay = Math.min(sibs, 6) * 50 + 'ms';
-        el.classList.add('in');
-        if (el.classList.contains('table-wrap')) {
-          el.querySelectorAll('tbody tr').forEach(function (tr, i) { tr.style.transitionDelay = i * 35 + 'ms'; });
+        if (el.classList.contains('reveal') && el.parentElement) {
+          var i = Array.prototype.indexOf.call(el.parentElement.children, el);
+          el.style.transitionDelay = Math.min(i, 5) * 70 + 'ms';
         }
+        el.classList.add('in');
         io.unobserve(el);
       });
     }, { rootMargin: '0px 0px -8% 0px' });
     targets.forEach(function (el) { io.observe(el); });
   }
 
-  // Introductory-call slot picker: single-select, echoed into the persistent summary
+  // Introductory-call time picker: single-select, echoed into the summary
   var slots = document.querySelectorAll('.slot');
   var echo = document.getElementById('slot-echo');
   var hidden = document.getElementById('chosen-slot');
@@ -78,7 +68,7 @@
       var err = f.querySelector('.error');
       if (!f.checkValidity()) { f.reportValidity(); return; }
       if (hidden && f.contains(hidden) && !hidden.value) {
-        if (err) { err.textContent = 'Pick a call slot in step 1 first.'; err.focus(); }
+        if (err) { err.textContent = 'Pick a time in step 1 first.'; err.focus(); }
         return;
       }
       if (err) err.textContent = '';

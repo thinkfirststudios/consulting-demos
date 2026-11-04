@@ -1,9 +1,9 @@
-// SEASON STATE — in season / out of season / closed to new season work. One line, changed once a year by [SEASONAL CONTENT OWNER — NAME A PERSON].
 var SEASON_STATE = 'in-season'; // 'in-season' | 'out-of-season' | 'closed-to-new'
+// SEASON STATE (line 1) — in season / out of season / closed to new season work. Changed once a year by Marion, the office manager (fictional).
 
 /* SPANWORTH TAX CO. — fictional demo.
    The season state changes three things and nothing else: which door is primary, the season band's
-   text (placeholders only), and whether gated jackets render in their dashed off-season state.
+   text, and whether gated jackets render in their dashed off-season state.
    It never changes a date, never adds urgency, never shows a countdown, never hides a price.
    No tracking, no chat widget, no exit-intent, no count-up, no file inputs. */
 (function () {
@@ -14,9 +14,9 @@ var SEASON_STATE = 'in-season'; // 'in-season' | 'out-of-season' | 'closed-to-ne
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var SEASON = {
-    'in-season':     { primary: 'appointment', text: 'In season — [SEASON WINDOW — CONFIRM ANNUALLY]. Appointments are being booked.' },
-    'out-of-season': { primary: 'quote',       text: 'Out of season — [OFF-SEASON AVAILABILITY — CONFIRM]. Planning work and quotes continue year-round.' },
-    'closed-to-new': { primary: 'appointment', text: 'Closed to new season work — [WHEN WE STOP TAKING NEW SEASON WORK — CONFIRM ANNUALLY]. Returning clients can still book.' }
+    'in-season':     { primary: 'appointment', text: 'In season: January 19 to April 15, 2027. Appointments are being booked.' },
+    'out-of-season': { primary: 'quote',       text: 'Out of season: Tuesday to Thursday, 9 to 4. Planning work and quotes continue year-round.' },
+    'closed-to-new': { primary: 'appointment', text: 'Closed to new season work since March 27, 2027. Returning clients can still book.' }
   };
   var s = SEASON[SEASON_STATE] || SEASON['in-season'];
 
@@ -32,7 +32,7 @@ var SEASON_STATE = 'in-season'; // 'in-season' | 'out-of-season' | 'closed-to-ne
     j.setAttribute('aria-label', label + ' — ' + (off ? 'not currently taken' : (j.classList.contains('is-active') ? 'active' : 'resting')));
   });
 
-  // Header condenses 86px -> 56px past 130px; sticky bar after the hero leaves
+  // Header condenses 84px -> 62px past 130px; sticky bar after the hero leaves
   var header = document.querySelector('.site-header');
   var hero = document.querySelector('.hero, .page-head');
   var bar = document.querySelector('.sticky-bar');
@@ -54,7 +54,7 @@ var SEASON_STATE = 'in-season'; // 'in-season' | 'out-of-season' | 'closed-to-ne
   }
 
   // Reveals (8px rise, 45ms stagger), jacket open, rail build, table rows — each once
-  var targets = document.querySelectorAll('.reveal, .jacket, .rail, .table-wrap');
+  var targets = document.querySelectorAll('.reveal, .jacket, .rail, .table-wrap, .tags');
   if (reduce || !('IntersectionObserver' in window)) {
     targets.forEach(function (el) { el.classList.add('in'); });
   } else {
@@ -95,7 +95,7 @@ var SEASON_STATE = 'in-season'; // 'in-season' | 'out-of-season' | 'closed-to-ne
     quote.addEventListener('change', function () {
       var answered = quote.querySelectorAll('input[type=radio]:checked').length;
       var out = document.getElementById('band-echo');
-      if (out) out.textContent = answered >= 3 ? '[LIKELY COMPLEXITY BAND — CONFIRM]' : 'Answer a few questions above';
+      if (out) out.textContent = answered >= 3 ? 'Likely Band B — a person confirms the band and fee in writing before any work starts (demo logic).' : 'Answer a few questions above';
     });
   }
 

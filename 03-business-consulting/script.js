@@ -4,12 +4,12 @@
   document.documentElement.classList.add('js');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Header condenses 84px -> 54px past 130px; sticky bar once the hero leaves
+  // Header condenses past 120px; sticky bar once the hero leaves
   var header = document.querySelector('.site-header');
   var hero = document.querySelector('.hero, .page-head');
   var bar = document.querySelector('.sticky-bar');
   function onScroll() {
-    if (header) header.classList.toggle('condensed', window.scrollY > 130);
+    if (header) header.classList.toggle('condensed', window.scrollY > 120);
     if (bar && hero) bar.classList.toggle('show', reduce || hero.getBoundingClientRect().bottom < 0);
   }
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -24,8 +24,35 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('open')) closeBtn.click(); });
   }
 
-  // Reveals: 10px rise, 55ms stagger; finding build, heading underline and tags each run once
-  var targets = document.querySelectorAll('.reveal, .finding, .em, .tags');
+  // Hero statements: dots switch them; auto-advance only without reduced motion, pausable, stops on hover/focus
+  var slides = document.querySelectorAll('.slide');
+  var dots = document.querySelectorAll('.dots-nav [data-slide]');
+  var pause = document.querySelector('.dots-nav .pause');
+  if (slides.length > 1) {
+    var cur = 0, timer = null, held = false;
+    var show = function (n) {
+      cur = n;
+      slides.forEach(function (s, i) { s.classList.toggle('on', i === n); s.setAttribute('aria-hidden', i === n ? 'false' : 'true'); });
+      dots.forEach(function (d, i) { d.setAttribute('aria-current', i === n ? 'true' : 'false'); });
+    };
+    var stop = function () { clearInterval(timer); timer = null; };
+    var start = function () { if (reduce || held || timer) return; timer = setInterval(function () { show((cur + 1) % slides.length); }, 7000); };
+    dots.forEach(function (d) { d.addEventListener('click', function () { show(+d.getAttribute('data-slide')); stop(); held = true; if (pause) pause.textContent = 'Play'; }); });
+    if (pause) {
+      if (reduce) { pause.textContent = 'Play'; held = true; }
+      pause.addEventListener('click', function () { held = !held; pause.textContent = held ? 'Play' : 'Pause'; if (held) stop(); else { reduce = false; start(); } });
+    }
+    var heroEl = document.querySelector('.hero');
+    if (heroEl) {
+      heroEl.addEventListener('mouseenter', stop);
+      heroEl.addEventListener('mouseleave', start);
+      heroEl.addEventListener('focusin', stop);
+    }
+    show(0); start();
+  }
+
+  // Reveals: 18px rise, 70ms stagger; heading underline and card rules draw once
+  var targets = document.querySelectorAll('.reveal, .finding, .find-card, .em');
   if (reduce || !('IntersectionObserver' in window)) {
     targets.forEach(function (el) { el.classList.add('in'); });
   } else {
@@ -35,10 +62,7 @@
         var el = en.target;
         if (el.classList.contains('reveal')) {
           var i = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
-          el.style.transitionDelay = Math.min(i, 6) * 55 + 'ms';
-        }
-        if (el.classList.contains('tags')) {
-          el.querySelectorAll('li').forEach(function (li, n) { li.style.transitionDelay = n * 25 + 'ms'; });
+          el.style.transitionDelay = Math.min(i, 5) * 70 + 'ms';
         }
         el.classList.add('in');
         io.unobserve(el);
@@ -47,7 +71,7 @@
     targets.forEach(function (el) { io.observe(el); });
   }
 
-  // Diagnostic index: the current entry crossfades to oxide. An index, not a progress track.
+  // Findings index: the entry for the finding in view is highlighted. An index, not a progress track.
   var links = document.querySelectorAll('.index a[href^="#"]');
   if (links.length && 'IntersectionObserver' in window) {
     var map = {};
@@ -63,18 +87,19 @@
     Object.keys(map).forEach(function (id) { var el = document.getElementById(id); if (el) spy.observe(el); });
   }
 
-  // ?finding=[n] carried into the intake summary
+  // ?finding=[n] carried into the intake summary, using the finding's real title
+  var TITLES = window.DK_FINDINGS || [];
   var params = new URLSearchParams(window.location.search);
   var f = params.get('finding');
   var arrived = document.getElementById('arrived');
   var arrivedField = document.getElementById('arrived-field');
-  if (f && /^\d{1,2}$/.test(f)) {
-    var label = 'Finding ' + ('0' + f).slice(-2) + ' — [FINDING TITLE — CLIENT TO SUPPLY]';
+  if (f && /^\d{1,2}$/.test(f) && TITLES[+f - 1]) {
+    var label = 'Finding ' + ('0' + f).slice(-2) + ' — ' + TITLES[+f - 1];
     if (arrived) arrived.textContent = label;
     if (arrivedField) arrivedField.value = label;
   }
 
-  // Multi-step scoping intake: each step a block; the active block wipes oxide once
+  // Multi-step scoping intake
   var steps = document.querySelectorAll('.step[data-step]');
   function activate(n) {
     steps.forEach(function (s) {
@@ -89,8 +114,8 @@
     activate(1);
     document.querySelectorAll('[data-next]').forEach(function (b) {
       b.addEventListener('click', function () {
-        var cur = b.closest('.step');
-        var bad = cur && Array.prototype.find.call(cur.querySelectorAll('input,select,textarea'), function (i) { return !i.checkValidity(); });
+        var curStep = b.closest('.step');
+        var bad = curStep && Array.prototype.find.call(curStep.querySelectorAll('input,select,textarea'), function (i) { return !i.checkValidity(); });
         if (bad) { bad.reportValidity(); return; }
         var n = +b.getAttribute('data-next');
         activate(n);

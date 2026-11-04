@@ -1,15 +1,26 @@
 # 01 — Carrack Advisory (fictional demo)
 
-Static HTML/CSS/JS. No build step. Open `index.html`.
+Static HTML/CSS/JS, no build step. Open `index.html`.
+
+**v2 layout** follows the structure of `consulting-ref-01` (top contact bar, white header, split dark hero,
+four-item trust strip, five service cards, about split with fact panel, four-step process rail, review row,
+dark CTA band, five-column footer) in 01's own palette (pewter / madder / ink). No navy, blue or gold.
+
+## Fictional vs. placeholder
+- **Fictional (demo only):** firm name, address (212 Corliss Street, Alderbrook, Oregon), (555) phone,
+  `carrackadvisory.example` email, hours, founded 2011, the founders' first names, all service copy.
+  Replace every one with the client's real details.
+- **Placeholder (never invented):** registration status, CRD/SEC numbers, standard of care, fee model and
+  schedule, Form ADV / Form CRS links, disclosures text, conflicts, credentials, consent wording.
+- **Review cards** are labelled empty slots. No names, stars or quotes until collected with consent and
+  approved under the SEC Marketing Rule.
 
 ## Booking handoff (introductory-call.html)
-We do not pretend to own booking. Two options, decided with the client:
-1. **Static + link out (default).** The slot picker and form collect name, email, phone, reason and a note, then POST to `[FORM ENDPOINT — CONFIRM]`; the confirmation links to `[SCHEDULER URL — CONFIRM]`.
-2. **Embed.** The client's scheduler embed sits below the picker and the picker is removed.
-Either way: no SSN, date of birth, account number, asset range or file field is ever added (B12).
+The time picker and form POST to `[FORM ENDPOINT — CONFIRM]` or hand off to `[SCHEDULER URL — CONFIRM]`.
+No SSN, date of birth, account number, asset range or file field is ever added.
 
 ## Launch blockers
-See `PROMPT.md` → PRE-LAUNCH (L1–L17). L1 (registration fork) and L2 (compliance officer approval of every word, retained) block absolutely.
+See `PROMPT.md` → PRE-LAUNCH. The registration answer and compliance-officer approval of every word block launch.
 
 ## Photos
-`assets/` — real Pexels photographs (Pexels licence), vetted by eye for people, legible text and logos. See `assets/CREDITS.md`.
+Real Pexels photographs of people (Pexels licence), vetted by eye. See `assets/CREDITS.md`.

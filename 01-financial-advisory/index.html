@@ -4,265 +4,136 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Financial planning and investment advice · Carrack Advisory (demo)</title>
-<meta name="description" content="Carrack Advisory — a fictional demo advisory practice.">
+<meta name="description" content="Carrack Advisory — a fictional demo financial planning practice in Alderbrook, Oregon.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400;0,500;0,600;1,400&family=Sarala:wght@400;700&family=Monda:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sarala:wght@400;700&family=Monda:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<!-- CONFIRM every value before launch -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":["FinancialService","Organization"],"name":"Carrack Advisory","description":"[PLACEHOLDER — CONFIRM]","telephone":"[PHONE — PLACEHOLDER]","email":"[EMAIL — PLACEHOLDER]","areaServed":"[STATES REGISTERED OR NOTICE-FILED IN — CONFIRM]"}</script>
+<!-- CONFIRM every value before launch: the demo values below are fictional -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":["FinancialService","Organization"],"name":"Carrack Advisory","telephone":"(555) 014-2290","email":"hello@carrackadvisory.example","foundingDate":"2011","address":{"@type":"PostalAddress","streetAddress":"212 Corliss Street, Suite 400","addressLocality":"Alderbrook","addressRegion":"OR"},"openingHours":"Mo-Fr 09:00-17:30"}</script>
 </head>
 <body>
 <div class="demo-marker" aria-label="Demo site">DEMO — ThinkFirst Studios · [Your name here]</div>
 <a class="skip" href="#main">Skip to content</a>
-<div class="utility"><div class="wrap">
-  <span><span class="ph">[CITY]</span>, <span class="ph">[STATE]</span> · <span class="ph">[STATES REGISTERED — CONFIRM]</span></span>
-  <span><span class="ph">[PHONE — PLACEHOLDER]</span> · <span class="ph">[CONTACT HOURS — CONFIRM]</span></span>
-  <a href="disclosures.html">Form ADV &amp; Form CRS →</a>
+<div class="topbar"><div class="wrap">
+  <span class="tb-item tb-addr"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>212 Corliss Street, Suite 400, Alderbrook, Oregon</span>
+  <span class="tb-item tb-hours"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>Mon–Fri · 9:00–5:30</span>
+  <span class="tb-right"><a class="tb-item" href="tel:+15550142290"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z"/></svg>(555) 014-2290</a><span class="tb-soc"><a class="soc" href="#" aria-label="LinkedIn (placeholder link)"><span aria-hidden="true">in</span></a><a class="soc" href="#" aria-label="Facebook (placeholder link)"><span aria-hidden="true">f</span></a><a class="soc" href="#" aria-label="YouTube (placeholder link)"><span aria-hidden="true">▶</span></a></span></span>
 </div></div>
 <header class="site-header"><div class="wrap">
-  <a class="wordmark" href="index.html">Carrack Advisory<small>Financial planning and investment advice</small></a>
-  <nav class="nav" aria-label="Main"><a href="services.html">Services</a><a href="fees.html">How we are paid</a><a href="disclosures.html">Disclosures</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
-  <a class="btn btn-primary header-cta" href="introductory-call.html">Book an introductory call</a>
+  <a class="brand" href="index.html" aria-label="Carrack Advisory — home"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 22h22l-3.4 5H8.4z" fill="currentColor"/><path d="M16 4v17M16 5l8.5 14H16M16 8.5 9.5 19H16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span class="bw"><span class="bw1">Carrack</span><span class="bw2">Advisory</span></span></a>
+  <nav class="nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="fees.html">How we're paid</a><a href="disclosures.html">Disclosures</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></nav>
+  <a class="btn btn-ink header-cta" href="introductory-call.html">Book an introductory call</a>
   <button class="menu-btn" aria-expanded="false" aria-controls="overlay">Menu</button>
 </div></header>
-<div class="overlay" id="overlay" role="dialog" aria-label="Menu"><button class="menu-btn overlay-close">Close</button><a href="services.html">Services</a><a href="fees.html">How we are paid</a><a href="disclosures.html">Disclosures</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+<div class="overlay" id="overlay" role="dialog" aria-label="Menu"><button class="menu-btn overlay-close">Close</button><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="fees.html">How we're paid</a><a href="disclosures.html">Disclosures</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
   <a class="btn btn-primary" href="introductory-call.html">Book an introductory call</a></div>
 <main id="main">
 
-<section class="hero"><div class="wrap"><div class="hero-grid">
-  <div class="hero-panel">
-    <span class="eyebrow"><span class="ph">[CITY]</span>, <span class="ph">[STATE]</span> · <span class="ph">[REGISTRATION STATUS — CONFIRM]</span></span>
-    <h1><span class="ph">[PLACEHOLDER HEADLINE — 4–7 words]</span></h1>
-    <p><span class="ph">[PLACEHOLDER: 2–3 sentences — client to supply]</span></p>
-    <div class="fee-anchor" aria-label="How we are paid, stated before the button">
-  <div class="row"><span class="label">Fee model</span><span><span class="ph">[FEE MODEL — CONFIRM: AUM BASIS POINTS / FLAT ANNUAL PLANNING FEE / HOURLY / A COMBINATION]</span></span></div>
-  <div class="row"><span class="label">Schedule</span><span><span class="ph">[FEE SCHEDULE — CONFIRM]</span></span></div>
-  <div class="row"><span class="label">Covers / does not</span><span><span class="ph">[WHAT IT COVERS / WHAT IT DOES NOT — CONFIRM]</span></span></div>
-  <div class="row"><span class="label">Minimum</span><span><span class="ph">[ACCOUNT MINIMUM — IF ANY — CONFIRM]</span></span></div>
-</div>
-<div class="cta-row"><a class="btn btn-primary" href="introductory-call.html">Book an introductory call</a>
-<a class="bare" href="fees.html">See how we are paid →</a></div>
-  </div>
+<section class="hero">
   <div class="hero-photo"><picture>
-    <source media="(max-width:959px)" srcset="assets/hero-m-900.webp" width="900" height="1125">
-    <img src="assets/hero-1600.webp" srcset="assets/hero-900.webp 900w, assets/hero-1600.webp 1600w, assets/hero-2400.webp 2400w" sizes="(min-width:960px) 48vw, 100vw" width="1600" height="1067" alt="A wooden desk seen from above in raking morning light, a single glass on it and nobody at it" fetchpriority="high">
+    <source media="(max-width:959px)" srcset="assets/hero-m-900.webp" width="900" height="675">
+    <img src="assets/hero-1600.webp" srcset="assets/hero-900.webp 900w, assets/hero-1600.webp 1600w, assets/hero-2400.webp 2400w" sizes="(min-width:960px) 55vw, 100vw" width="1600" height="1333" alt="A smiling man in a dark blazer and open-collared white shirt, leaning on a desk in a softly lit office" fetchpriority="high">
   </picture></div>
-</div></div></section>
-<div class="spine wrap" role="region" aria-label="Disclosure spine">
-  <div class="spine-grid" style="position:relative"><span class="spine-rule" aria-hidden="true"></span>
-    <div class="cell is-active" aria-label="Who we are — registration status and fiduciary status, to be confirmed — active">
-      <span class="label">Who we are</span>
-      <span class="ph">[REGISTRATION STATUS — CONFIRM: RIA (STATE OR SEC) / BROKER-DEALER REP / INSURANCE PRODUCER / UNREGISTERED COACH]</span>
-      <p><span class="ph">[FIDUCIARY STATUS — CONFIRM AGAINST REGISTRATION]</span></p>
-      <span class="state">Awaiting the registration answer</span>
-    </div>
-    <div class="cell is-resting" aria-label="How we are paid — fee model, schedule and minimum, to be confirmed — resting">
-      <span class="label">How we are paid</span>
-      <span class="ph">[FEE MODEL — CONFIRM]</span>
-      <p><span class="ph">[FEE SCHEDULE — CONFIRM]</span></p>
-      <p><span class="ph">[ACCOUNT MINIMUM — IF ANY — CONFIRM]</span></p>
-      <p><a href="fees.html">See how we are paid →</a></p>
-    </div>
-    <div class="cell is-resting" aria-label="Where to read it — Form ADV Part 2A, Form CRS and disclosures — resting">
-      <span class="label">Where to read it</span>
-      <a href="disclosures.html#adv"><span class="ph">[FORM ADV PART 2A — CLIENT TO SUPPLY LINK]</span></a>
-      <p><a href="disclosures.html#crs"><span class="ph">[FORM CRS — CLIENT TO SUPPLY LINK]</span></a></p>
-      <p><a href="disclosures.html#disclosures"><span class="ph">[DISCLOSURES — COMPLIANCE OFFICER TO SUPPLY, VERBATIM]</span></a></p>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow on-dark">Financial planning in Alderbrook, Oregon</span>
+      <h1>Clear financial advice for the decisions ahead</h1>
+      <p class="lead">We help individuals, families and small-business owners put their finances in writing, understand their options and plan for retirement, education and the years after.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="introductory-call.html">Book an introductory call</a>
+        <a class="btn btn-ghost" href="services.html">Our services <svg class="ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <p class="fee-line on-dark"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v16M7 20h10M5 8h14M5 8l-2.5 5h5zM19 8l-2.5 5h5z"/></svg><span><strong>How we're paid:</strong> <span class="ph">[FEE MODEL — CONFIRM]</span> · <a href="fees.html">See fees</a></span></p>
+      <p class="reg-line"><span class="ph">[REGISTRATION STATUS — CONFIRM: RIA (STATE OR SEC) / BROKER-DEALER REP / INSURANCE PRODUCER]</span></p>
     </div>
   </div>
-</div>
-<section><div class="wrap">
-  <div class="section-head reveal"><span class="eyebrow">Services</span><h2>Five services, and what each one leaves out</h2><p><span class="ph">[PLACEHOLDER: 2–3 sentences — client to supply]</span></p></div>
-  <div class="cards5"><article class="card reveal"><h3>Financial planning</h3><dl>
-<dt>What it includes</dt><dd><span class="ph">[WHAT IT INCLUDES — CONFIRM]</span></dd>
-<dt>What it does not include</dt><dd><span class="ph">[WHAT IT DOES NOT INCLUDE — CONFIRM]</span></dd>
-<dt>How it is paid for</dt><dd><span class="ph">[HOW IT IS PAID FOR — CONFIRM]</span></dd></dl>
-<p style="margin-top:1rem"><a href="services.html#planning">Read the financial planning section →</a></p></article><article class="card reveal"><h3>Investment advice</h3><dl>
-<dt>What it includes</dt><dd><span class="ph">[WHAT IT INCLUDES — CONFIRM]</span></dd>
-<dt>What it does not include</dt><dd><span class="ph">[WHAT IT DOES NOT INCLUDE — CONFIRM]</span></dd>
-<dt>How it is paid for</dt><dd><span class="ph">[HOW IT IS PAID FOR — CONFIRM]</span></dd></dl>
-<p style="margin-top:1rem"><a href="services.html#investment">Read the investment advice section →</a></p></article><article class="card reveal"><h3>Retirement planning</h3><dl>
-<dt>What it includes</dt><dd><span class="ph">[WHAT IT INCLUDES — CONFIRM]</span></dd>
-<dt>What it does not include</dt><dd><span class="ph">[WHAT IT DOES NOT INCLUDE — CONFIRM]</span></dd>
-<dt>How it is paid for</dt><dd><span class="ph">[HOW IT IS PAID FOR — CONFIRM]</span></dd></dl>
-<p style="margin-top:1rem"><a href="services.html#retirement">Read the retirement planning section →</a></p></article><article class="card reveal"><h3>Tax-aware planning</h3><dl>
-<dt>What it includes</dt><dd><span class="ph">[WHAT IT INCLUDES — CONFIRM]</span></dd>
-<dt>What it does not include</dt><dd><span class="ph">[WHAT IT DOES NOT INCLUDE — CONFIRM]</span></dd>
-<dt>How it is paid for</dt><dd><span class="ph">[HOW IT IS PAID FOR — CONFIRM]</span></dd></dl>
-<p style="margin-top:1rem"><a href="services.html#tax-aware">Read the tax-aware planning section →</a></p></article><article class="card reveal"><h3>Family and education planning</h3><dl>
-<dt>What it includes</dt><dd><span class="ph">[WHAT IT INCLUDES — CONFIRM]</span></dd>
-<dt>What it does not include</dt><dd><span class="ph">[WHAT IT DOES NOT INCLUDE — CONFIRM]</span></dd>
-<dt>How it is paid for</dt><dd><span class="ph">[HOW IT IS PAID FOR — CONFIRM]</span></dd></dl>
-<p style="margin-top:1rem"><a href="services.html#family">Read the family and education planning section →</a></p></article></div>
-  <p style="margin-top:1.5rem"><a class="bare" href="services.html">See every service in full →</a></p>
-</div></section>
-<section class="band-deep" id="paid"><div class="wrap">
-  <div class="section-head reveal"><span class="eyebrow">How we are paid</span><h2>The fee, what drives it, and what it does not cover</h2>
-  <p><span class="ph">[PLACEHOLDER: 2–3 sentences — client to supply]</span></p><p><span class="ph">[WHICH FEE MODELS ARE ACTUALLY OFFERED — CONFIRM]</span> — only the tables for models genuinely offered ship.</p></div>
-  <div class="table-wrap reveal"><table class="fee"><caption>Asset-based fee <span class="ph">[CONFIRM THIS MODEL IS OFFERED]</span></caption>
-<thead><tr><th scope="col">Engagement</th><th scope="col">Fee</th><th scope="col">What it covers</th><th scope="col">What drives the fee</th></tr></thead>
-<tbody>
-<tr><th scope="row" data-label="Engagement"><span class="ph">[AUM — ENGAGEMENT 1 — CONFIRM]</span></th><td data-label="Fee"><span class="ph">[FEE — CONFIRM]</span></td><td data-label="What it covers"><span class="ph">[WHAT IT COVERS — CONFIRM]</span></td><td data-label="What drives the fee"><span class="ph">[WHAT DRIVES THE FEE — CONFIRM: ASSETS / COMPLEXITY / ONGOING OR ONE-OFF]</span></td></tr>
-<tr><th scope="row" data-label="Engagement"><span class="ph">[AUM — ENGAGEMENT 2 — CONFIRM]</span></th><td data-label="Fee"><span class="ph">[FEE — CONFIRM]</span></td><td data-label="What it covers"><span class="ph">[WHAT IT COVERS — CONFIRM]</span></td><td data-label="What drives the fee"><span class="ph">[WHAT DRIVES THE FEE — CONFIRM]</span></td></tr>
-<tr><th scope="row" data-label="Engagement"><span class="ph">[AUM — ENGAGEMENT 3 — CONFIRM]</span></th><td data-label="Fee"><span class="ph">[FEE — CONFIRM]</span></td><td data-label="What it covers"><span class="ph">[WHAT IT COVERS — CONFIRM]</span></td><td data-label="What drives the fee"><span class="ph">[WHAT DRIVES THE FEE — CONFIRM]</span></td></tr>
-</tbody></table></div><div style="height:2rem"></div><div class="table-wrap reveal"><table class="fee"><caption>Flat annual planning fee <span class="ph">[CONFIRM THIS MODEL IS OFFERED]</span></caption>
-<thead><tr><th scope="col">Engagement</th><th scope="col">Fee</th><th scope="col">What it covers</th><th scope="col">What drives the fee</th></tr></thead>
-<tbody>
-<tr><th scope="row" data-label="Engagement"><span class="ph">[FLAT FEE — ENGAGEMENT 1 — CONFIRM]</span></th><td data-label="Fee"><span class="ph">[FEE — CONFIRM]</span></td><td data-label="What it covers"><span class="ph">[WHAT IT COVERS — CONFIRM]</span></td><td data-label="What drives the fee"><span class="ph">[WHAT DRIVES THE FEE — CONFIRM: ASSETS / COMPLEXITY / ONGOING OR ONE-OFF]</span></td></tr>
-<tr><th scope="row" data-label="Engagement"><span class="ph">[FLAT FEE — ENGAGEMENT 2 — CONFIRM]</span></th><td data-label="Fee"><span class="ph">[FEE — CONFIRM]</span></td><td data-label="What it covers"><span class="ph">[WHAT IT COVERS — CONFIRM]</span></td><td data-label="What drives the fee"><span class="ph">[WHAT DRIVES THE FEE — CONFIRM]</span></td></tr>
-<tr><th scope="row" data-label="Engagement"><span class="ph">[FLAT FEE — ENGAGEMENT 3 — CONFIRM]</span></th><td data-label="Fee"><span class="ph">[FEE — CONFIRM]</span></td><td data-label="What it covers"><span class="ph">[WHAT IT COVERS — CONFIRM]</span></td><td data-label="What drives the fee"><span class="ph">[WHAT DRIVES THE FEE — CONFIRM]</span></td></tr>
-</tbody></table></div><div style="height:2rem"></div><div class="table-wrap reveal"><table class="fee"><caption>Hourly advice <span class="ph">[CONFIRM THIS MODEL IS OFFERED]</span></caption>
-<thead><tr><th scope="col">Engagement</th><th scope="col">Fee</th><th scope="col">What it covers</th><th scope="col">What drives the fee</th></tr></thead>
-<tbody>
-<tr><th scope="row" data-label="Engagement"><span class="ph">[HOURLY — ENGAGEMENT 1 — CONFIRM]</span></th><td data-label="Fee"><span class="ph">[FEE — CONFIRM]</span></td><td data-label="What it covers"><span class="ph">[WHAT IT COVERS — CONFIRM]</span></td><td data-label="What drives the fee"><span class="ph">[WHAT DRIVES THE FEE — CONFIRM: ASSETS / COMPLEXITY / ONGOING OR ONE-OFF]</span></td></tr>
-<tr><th scope="row" data-label="Engagement"><span class="ph">[HOURLY — ENGAGEMENT 2 — CONFIRM]</span></th><td data-label="Fee"><span class="ph">[FEE — CONFIRM]</span></td><td data-label="What it covers"><span class="ph">[WHAT IT COVERS — CONFIRM]</span></td><td data-label="What drives the fee"><span class="ph">[WHAT DRIVES THE FEE — CONFIRM]</span></td></tr>
-<tr><th scope="row" data-label="Engagement"><span class="ph">[HOURLY — ENGAGEMENT 3 — CONFIRM]</span></th><td data-label="Fee"><span class="ph">[FEE — CONFIRM]</span></td><td data-label="What it covers"><span class="ph">[WHAT IT COVERS — CONFIRM]</span></td><td data-label="What drives the fee"><span class="ph">[WHAT DRIVES THE FEE — CONFIRM]</span></td></tr>
-</tbody></table></div>
-  <div class="kv reveal" style="margin-top:2rem"><dt>Third-party costs</dt><dd><span class="ph">[THIRD-PARTY COSTS — CONFIRM]</span></dd><dt>What is not included</dt><dd><span class="ph">[WHAT IS NOT INCLUDED — CONFIRM]</span></dd></div>
-  <p style="margin-top:1.5rem"><a class="bare" href="fees.html">See how we are paid, in full →</a></p>
-</div></section>
-<div style="padding-top:2rem;background:var(--fa-pewter-deep)"><div class="spine wrap" role="region" aria-label="Disclosure spine">
-  <div class="spine-grid" style="position:relative"><span class="spine-rule" aria-hidden="true"></span>
-    <div class="cell is-blocked" aria-label="Who we are — registration status and fiduciary status, to be confirmed — blocked — registration fork unanswered">
-      <span class="label">Who we are</span>
-      <span class="ph">[REGISTRATION STATUS — CONFIRM: RIA (STATE OR SEC) / BROKER-DEALER REP / INSURANCE PRODUCER / UNREGISTERED COACH]</span>
-      <p><span class="ph">[FIDUCIARY STATUS — CONFIRM AGAINST REGISTRATION]</span></p>
-      <span class="state">Awaiting the registration answer</span>
-    </div>
-    <div class="cell is-active" aria-label="How we are paid — fee model, schedule and minimum, to be confirmed — active">
-      <span class="label">How we are paid</span>
-      <span class="ph">[FEE MODEL — CONFIRM]</span>
-      <p><span class="ph">[FEE SCHEDULE — CONFIRM]</span></p>
-      <p><span class="ph">[ACCOUNT MINIMUM — IF ANY — CONFIRM]</span></p>
-      <p><a href="fees.html">See how we are paid →</a></p>
-    </div>
-    <div class="cell is-resting" aria-label="Where to read it — Form ADV Part 2A, Form CRS and disclosures — resting">
-      <span class="label">Where to read it</span>
-      <a href="disclosures.html#adv"><span class="ph">[FORM ADV PART 2A — CLIENT TO SUPPLY LINK]</span></a>
-      <p><a href="disclosures.html#crs"><span class="ph">[FORM CRS — CLIENT TO SUPPLY LINK]</span></a></p>
-      <p><a href="disclosures.html#disclosures"><span class="ph">[DISCLOSURES — COMPLIANCE OFFICER TO SUPPLY, VERBATIM]</span></a></p>
-    </div>
-  </div>
-</div></div>
-<section><div class="wrap">
-  <div class="section-head reveal"><span class="eyebrow">How it works</span><h2>From first call to engagement</h2></div>
-  <ol class="plain reveal">
-    <li><span><span class="ph">[PLACEHOLDER: 1–2 sentences — step one, client to supply]</span></span></li>
-    <li><span><span class="ph">[PLACEHOLDER: 1–2 sentences — step two, client to supply]</span></span></li>
-    <li><span><span class="ph">[PLACEHOLDER: 1–2 sentences — step three, client to supply]</span></span></li>
-    <li><span><span class="ph">[PLACEHOLDER: 1–2 sentences — step four, client to supply]</span></span></li>
-  </ol>
-</div></section>
-<section class="band-sheet"><div class="wrap split">
-  <figure class="photo" style="margin:0"><img src="assets/room-blind-600.webp" srcset="assets/room-blind-600.webp 600w, assets/room-blind-1200.webp 1200w" sizes="(min-width:900px) 50vw, 100vw" width="1200" height="900" alt="An empty room with vertical blinds drawn across a tall window and a pale tiled floor" loading="lazy" decoding="async"></figure>
-  <div class="reveal"><span class="eyebrow">Fit</span><h2>Who this is for — and who it is not for</h2><p><span class="ph">[PLACEHOLDER: 2–3 sentences — client to supply]</span></p>
-    <h3>Who this is for</h3><ul class="check">
-      <li><span class="ph">[WHO THIS IS FOR — CONFIRM, ITEM 1]</span></li><li><span class="ph">[WHO THIS IS FOR — CONFIRM, ITEM 2]</span></li><li><span class="ph">[WHO THIS IS FOR — CONFIRM, ITEM 3]</span></li></ul>
-    <h3>Who this is not for</h3><ul class="check not">
-      <li><span class="ph">[WHO THIS IS NOT FOR — CONFIRM, ITEM 1]</span></li><li><span class="ph">[WHO THIS IS NOT FOR — CONFIRM, ITEM 2]</span></li><li><span class="ph">[WHO THIS IS NOT FOR — CONFIRM, ITEM 3]</span></li></ul>
-    <p><a class="bare" href="about.html">About the practice →</a></p></div>
-</div></section>
-<div style="padding-top:2rem;background:var(--fa-sheet)"><div class="spine wrap" role="region" aria-label="Disclosure spine">
-  <div class="spine-grid" style="position:relative"><span class="spine-rule" aria-hidden="true"></span>
-    <div class="cell is-active" aria-label="Who we are — registration status and fiduciary status, to be confirmed — active">
-      <span class="label">Who we are</span>
-      <span class="ph">[REGISTRATION STATUS — CONFIRM: RIA (STATE OR SEC) / BROKER-DEALER REP / INSURANCE PRODUCER / UNREGISTERED COACH]</span>
-      <p><span class="ph">[FIDUCIARY STATUS — CONFIRM AGAINST REGISTRATION]</span></p>
-      <span class="state">Awaiting the registration answer</span>
-    </div>
-    <div class="cell is-resting" aria-label="How we are paid — fee model, schedule and minimum, to be confirmed — resting">
-      <span class="label">How we are paid</span>
-      <span class="ph">[FEE MODEL — CONFIRM]</span>
-      <p><span class="ph">[FEE SCHEDULE — CONFIRM]</span></p>
-      <p><span class="ph">[ACCOUNT MINIMUM — IF ANY — CONFIRM]</span></p>
-      <p><a href="fees.html">See how we are paid →</a></p>
-    </div>
-    <div class="cell is-resting" aria-label="Where to read it — Form ADV Part 2A, Form CRS and disclosures — resting">
-      <span class="label">Where to read it</span>
-      <a href="disclosures.html#adv"><span class="ph">[FORM ADV PART 2A — CLIENT TO SUPPLY LINK]</span></a>
-      <p><a href="disclosures.html#crs"><span class="ph">[FORM CRS — CLIENT TO SUPPLY LINK]</span></a></p>
-      <p><a href="disclosures.html#disclosures"><span class="ph">[DISCLOSURES — COMPLIANCE OFFICER TO SUPPLY, VERBATIM]</span></a></p>
-    </div>
-  </div>
-</div></div>
-<section class="docs-band"><div class="wrap"><div class="docs-side"><div>
-<div class="section-head reveal"><span class="eyebrow">Where to read it</span><h2>The documents you are entitled to, before you call</h2><p><span class="ph">[PLACEHOLDER: 2–3 sentences — client to supply]</span></p></div>
-<div class="doc-row reveal" id="adv-row"><a href="disclosures.html#adv">Form ADV Part 2A <span class="ph">[CLIENT TO SUPPLY LINK]</span></a><span><span class="ph">[WHAT IT IS — PLACEHOLDER: 1 sentence]</span></span></div>
-<div class="doc-row reveal"><a href="disclosures.html#crs">Form CRS <span class="ph">[CLIENT TO SUPPLY LINK]</span></a><span><span class="ph">[WHAT IT IS — PLACEHOLDER: 1 sentence]</span></span></div>
-<div class="doc-row reveal"><a href="disclosures.html#privacy-notice">Privacy notice <span class="ph">[CLIENT TO SUPPLY]</span></a><span><span class="ph">[WHAT IT IS — PLACEHOLDER: 1 sentence]</span></span></div>
-<div class="doc-row reveal"><a href="fees.html#agreement">Advisory agreement <span class="ph">[CONFIRM]</span></a><span><span class="ph">[WHAT IT IS — PLACEHOLDER: 1 sentence]</span></span></div>
-<p style="margin-top:1.25rem"><a class="bare" href="disclosures.html">See the disclosures page in full →</a></p></div>
-<figure class="photo" style="margin:0"><img src="assets/doc-paper-600.webp" srcset="assets/doc-paper-600.webp 600w, assets/doc-paper-1000.webp 1000w" sizes="(min-width:1100px) 30vw, 100vw" width="1000" height="1000" alt="A stack of blank white paper on a grey surface" loading="lazy" decoding="async"></figure>
-</div></div></section>
-<section><div class="wrap"><div class="section-head reveal"><span class="eyebrow">The team</span><h2>Who you would speak to</h2>
-<p><span class="ph">[TEAM — CONFIRM NAMES, CREDENTIALS AND PERMISSION]</span> These frames stay empty until names, credentials and signed releases are in hand.</p></div>
-<div class="frames3"><div class="frame-empty portrait reveal">Team portrait — client to supply, with signed release<span class="ph">[TEAM — CONFIRM NAMES, CREDENTIALS AND PERMISSION]</span><span class="ph">[CREDENTIALS — CONFIRM, WITH NUMBERS]</span></div><div class="frame-empty portrait reveal">Team portrait — client to supply, with signed release<span class="ph">[TEAM — CONFIRM NAMES, CREDENTIALS AND PERMISSION]</span><span class="ph">[CREDENTIALS — CONFIRM, WITH NUMBERS]</span></div><div class="frame-empty portrait reveal">Team portrait — client to supply, with signed release<span class="ph">[TEAM — CONFIRM NAMES, CREDENTIALS AND PERMISSION]</span><span class="ph">[CREDENTIALS — CONFIRM, WITH NUMBERS]</span></div></div></div></section>
-<section style="padding-top:0"><div class="wrap"><div class="section-head reveal"><span class="eyebrow">Clients</span><h2>Who we work with</h2></div><div class="frame-empty clients reveal">Client list — empty by design<span class="ph">[CLIENT LIST — CONFIRM PERMISSION, CHECK NDAs]</span><span style="text-transform:none;font-weight:400;margin-top:.5rem">Client relationships in this trade are confidential by default. Nothing appears here without written permission.</span></div></div></section>
-<section class="band-deep"><div class="wrap">
-  <div class="section-head reveal"><span class="eyebrow">References</span><h2>Why there are no testimonials here</h2></div>
-  <div class="frames3"><div class="frame-empty ref reveal">Reference panel — empty by design<span class="ph">[REVIEW — COLLECT]</span></div><div class="frame-empty ref reveal">Reference panel — empty by design<span class="ph">[REVIEW — COLLECT]</span></div><div class="frame-empty ref reveal">Reference panel — empty by design<span class="ph">[REVIEW — COLLECT]</span></div></div>
-  <p class="why-line reveal"><span class="ph">[WHY THERE ARE NO TESTIMONIALS HERE — SEE THE SEC MARKETING RULE — CONFIRM WORDING WITH THE COMPLIANCE OFFICER]</span></p>
-</div></section>
-<section class="dark-band">
-  <div class="bg"><figure class="" style="margin:0"><img src="assets/band-wall-1200.webp" srcset="assets/band-wall-1200.webp 1200w, assets/band-wall-2400.webp 2400w" sizes="100vw" width="2400" height="1029" alt="" loading="lazy" decoding="async"></figure></div>
-  <div class="wrap"><span class="eyebrow" style="color:#E4DDE1">Introductory call</span>
-  <h2><span class="ph">[PLACEHOLDER HEADLINE — the introductory call]</span></h2>
-  <p><span class="ph">[CALL SLOT — CONFIRM AVAILABILITY]</span> slots open</p>
-  <div class="fee-anchor" aria-label="How we are paid, stated before the button">
-  <div class="row"><span class="label">Fee model</span><span><span class="ph">[FEE MODEL — CONFIRM: AUM BASIS POINTS / FLAT ANNUAL PLANNING FEE / HOURLY / A COMBINATION]</span></span></div>
-  <div class="row"><span class="label">Schedule</span><span><span class="ph">[FEE SCHEDULE — CONFIRM]</span></span></div>
-  <div class="row"><span class="label">Covers / does not</span><span><span class="ph">[WHAT IT COVERS / WHAT IT DOES NOT — CONFIRM]</span></span></div>
-  <div class="row"><span class="label">Minimum</span><span><span class="ph">[ACCOUNT MINIMUM — IF ANY — CONFIRM]</span></span></div>
-</div>
-  <a class="btn btn-primary" href="introductory-call.html">Book an introductory call</a></div>
 </section>
-<div style="padding:2rem 0"><div class="spine wrap" role="region" aria-label="Disclosure spine">
-  <div class="spine-grid" style="position:relative"><span class="spine-rule" aria-hidden="true"></span>
-    <div class="cell is-blocked" aria-label="Who we are — registration status and fiduciary status, to be confirmed — blocked — registration fork unanswered">
-      <span class="label">Who we are</span>
-      <span class="ph">[REGISTRATION STATUS — CONFIRM: RIA (STATE OR SEC) / BROKER-DEALER REP / INSURANCE PRODUCER / UNREGISTERED COACH]</span>
-      <p><span class="ph">[FIDUCIARY STATUS — CONFIRM AGAINST REGISTRATION]</span></p>
-      <span class="state">Awaiting the registration answer</span>
-    </div>
-    <div class="cell is-resting" aria-label="How we are paid — fee model, schedule and minimum, to be confirmed — resting">
-      <span class="label">How we are paid</span>
-      <span class="ph">[FEE MODEL — CONFIRM]</span>
-      <p><span class="ph">[FEE SCHEDULE — CONFIRM]</span></p>
-      <p><span class="ph">[ACCOUNT MINIMUM — IF ANY — CONFIRM]</span></p>
-      <p><a href="fees.html">See how we are paid →</a></p>
-    </div>
-    <div class="cell is-active" aria-label="Where to read it — Form ADV Part 2A, Form CRS and disclosures — active">
-      <span class="label">Where to read it</span>
-      <a href="disclosures.html#adv"><span class="ph">[FORM ADV PART 2A — CLIENT TO SUPPLY LINK]</span></a>
-      <p><a href="disclosures.html#crs"><span class="ph">[FORM CRS — CLIENT TO SUPPLY LINK]</span></a></p>
-      <p><a href="disclosures.html#disclosures"><span class="ph">[DISCLOSURES — COMPLIANCE OFFICER TO SUPPLY, VERBATIM]</span></a></p>
-    </div>
+<section class="trust" aria-label="At a glance"><div class="wrap"><ul class="trust-row"><li class="reveal"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v16M7 20h10M5 8h14M5 8l-2.5 5h5zM19 8l-2.5 5h5z"/></svg><div><h3>Fees stated up front</h3><p>How we're paid: <span class="ph">[FEE MODEL — CONFIRM]</span>, before any call.</p></div></li><li class="reveal"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11 12 4l8 7v9H4zM10 20v-5h4v5"/></svg><div><h3>Owner-run practice</h3><p>Founded on Corliss Street in 2011.</p></div></li><li class="reveal"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg><div><h3>Form ADV &amp; Form CRS</h3><p>Read them <a href="disclosures.html">before you call</a>.</p></div></li><li class="reveal"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><div><h3>Your financial privacy</h3><p>This site never asks for account or ID numbers.</p></div></li></ul></div></section>
+<section class="services"><div class="wrap">
+  <div class="sec-head center reveal"><span class="eyebrow">Our services</span><h2>Planning for every part of your finances</h2></div>
+  <div class="svc-grid"><article class="svc-card reveal"><span class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="4" width="12" height="17" rx="1.5"/><path d="M9 4h6v3H9zM9 11h6M9 15h4"/></svg></span><h3>Financial planning</h3><p>A written plan covering cash flow, savings, insurance, retirement and estate questions in one place, reviewed with you line by line.</p>
+<a class="more" href="services.html#planning">Learn more<span class="vh"> about financial planning</span><svg class="ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="svc-card reveal"><span class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20h16M7 16v-4M12 16V8M17 16v-7"/></svg></span><h3>Investment advice</h3><p>Advice on how your accounts are invested, set out around the plan and your own timeline rather than the week's headlines.</p>
+<a class="more" href="services.html#investment">Learn more<span class="vh"> about investment advice</span><svg class="ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="svc-card reveal"><span class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 18h18M6 18a6 6 0 0 1 12 0M12 7V4M6.3 10.3 4.6 8.6M17.7 10.3l1.7-1.7"/></svg></span><h3>Retirement planning</h3><p>When you might stop working, how income could be drawn, and what to do with pensions and retirement accounts along the way.</p>
+<a class="more" href="services.html#retirement">Learn more<span class="vh"> about retirement planning</span><svg class="ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="svc-card reveal"><span class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6M9 16h3"/></svg></span><h3>Tax-aware planning</h3><p>Planning that takes taxes into account, coordinated with your own accountant, who prepares and files your return.</p>
+<a class="more" href="services.html#tax-aware">Learn more<span class="vh"> about tax-aware planning</span><svg class="ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article><article class="svc-card reveal"><span class="ic-wrap"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3 2.2-5 5-5s5 2 5 5M13.5 20c.2-2.4 1.6-4 3.5-4s3.3 1.6 3.5 4"/></svg></span><h3>Family &amp; education</h3><p>Saving for a child's education, supporting parents, and thinking through what passes to the next generation.</p>
+<a class="more" href="services.html#family">Learn more<span class="vh"> about family and education</span><svg class="ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article></div>
+</div></section>
+<section class="about"><div class="wrap about-grid">
+  <figure class="photo about-photo reveal"><img src="assets/meet-table-1200.webp" srcset="assets/meet-table-600.webp 600w, assets/meet-table-1200.webp 1200w" sizes="(min-width:1100px) 38vw, 100vw" width="1200" height="900" alt="Three colleagues in suits gathered around a laptop at a wooden meeting table" loading="lazy" decoding="async"></figure>
+  <div class="about-copy reveal">
+    <span class="eyebrow">About us</span>
+    <h2>Your questions first. Then a plan you can read.</h2>
+    <p>Maren and Teodor opened Carrack Advisory in 2011 with a simple idea: every client should sit down with the person writing their plan, and every fee should be explained before any work begins.</p>
+    <ul class="ticks">
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Meetings at our Alderbrook office or by video</li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>A written plan you keep, in plain English</li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Fees explained before you engage</li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>Your own accountant and attorney kept in the loop</li>
+    </ul>
+    <a class="btn btn-ink" href="about.html">More about us <svg class="ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
-</div></div>
+  <ul class="facts reveal" aria-label="Practice facts"><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><div><strong>2011</strong><span>Year founded</span></div></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><strong>Alderbrook</strong><span>Office on Corliss Street</span></div></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="6" width="13" height="12" rx="1.5"/><path d="m16 10 5-3v10l-5-3z"/></svg><div><strong>In person or video</strong><span>Meeting formats</span></div></li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg><div><strong>Form ADV</strong><span><a href="disclosures.html#adv">Read it before you call</a></span></div></li></ul>
+</div></section>
+<section class="process"><div class="wrap">
+  <div class="sec-head center reveal"><span class="eyebrow">Our process</span><h2>Four steps, at your pace</h2></div>
+  <ol class="rail"><li class="step reveal"><span class="num">1</span><span class="disc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></span><h3>Discover</h3><p>A first conversation about where you are, what you want to change and the questions on your mind.</p></li><li class="step reveal"><span class="num">2</span><span class="disc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="4" width="12" height="17" rx="1.5"/><path d="M9 4h6v3H9zM9 11h6M9 15h4"/></svg></span><h3>Plan</h3><p>We write up a plan in plain English and go through it with you, including what it does not cover.</p></li><li class="step reveal"><span class="num">3</span><span class="disc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span><h3>Implement</h3><p>Agreed steps are put in place, at your pace, with every cost explained before anything happens.</p></li><li class="step reveal"><span class="num">4</span><span class="disc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 8a7.5 7.5 0 0 0-13.5 1M5 16a7.5 7.5 0 0 0 13.5-1M19 4v4h-4M5 20v-4h4"/></svg></span><h3>Review</h3><p>We meet regularly to revisit the plan as your life, work and family change.</p></li></ol>
+</div></section>
+<section class="reviews"><div class="wrap">
+  <div class="sec-head center reveal"><span class="eyebrow">What our clients say</span><h2>Client reviews, once they can be shown</h2></div>
+  <div class="rv-grid"><article class="review reveal"><svg class="q" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 7H6.5A1.5 1.5 0 0 0 5 8.5V13h4v4H5M19 7h-3.5A1.5 1.5 0 0 0 14 8.5V13h4v4h-4"/></svg>
+<p class="rv-slot"><span class="ph">[CLIENT REVIEW — COLLECT WITH WRITTEN CONSENT; COMPLIANCE OFFICER TO APPROVE]</span></p>
+<div class="rv-foot"><span class="avatar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span><span><strong>Review slot 1</strong><br><span class="rv-note">Shown only once approved under the SEC Marketing Rule</span></span></div></article><article class="review reveal"><svg class="q" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 7H6.5A1.5 1.5 0 0 0 5 8.5V13h4v4H5M19 7h-3.5A1.5 1.5 0 0 0 14 8.5V13h4v4h-4"/></svg>
+<p class="rv-slot"><span class="ph">[CLIENT REVIEW — COLLECT WITH WRITTEN CONSENT; COMPLIANCE OFFICER TO APPROVE]</span></p>
+<div class="rv-foot"><span class="avatar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span><span><strong>Review slot 2</strong><br><span class="rv-note">Shown only once approved under the SEC Marketing Rule</span></span></div></article><article class="review reveal"><svg class="q" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 7H6.5A1.5 1.5 0 0 0 5 8.5V13h4v4H5M19 7h-3.5A1.5 1.5 0 0 0 14 8.5V13h4v4h-4"/></svg>
+<p class="rv-slot"><span class="ph">[CLIENT REVIEW — COLLECT WITH WRITTEN CONSENT; COMPLIANCE OFFICER TO APPROVE]</span></p>
+<div class="rv-foot"><span class="avatar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c0-3.6 3.1-6 7-6s7 2.4 7 6"/></svg></span><span><strong>Review slot 3</strong><br><span class="rv-note">Shown only once approved under the SEC Marketing Rule</span></span></div></article></div>
+  <p class="rv-rule reveal"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg><span>Testimonials and endorsements for investment advisers are governed by the SEC Marketing Rule. These slots stay empty until each review is collected with consent, disclosed correctly and approved. <span class="ph">[WORDING — COMPLIANCE OFFICER TO CONFIRM]</span></span></p>
+</div></section>
+<section class="docs"><div class="wrap">
+  <div class="docs-grid">
+    <div class="reveal"><span class="eyebrow">Read before you call</span><h2>Our documents, in the open</h2>
+      <p>Every prospective client is entitled to read these before engaging. They explain what the firm is, how it is paid and where conflicts may arise.</p></div>
+    <a class="doc-card reveal" id="adv-card" href="disclosures.html#adv"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg><span><strong>Form ADV Part 2A</strong><span><span class="ph">[CLIENT TO SUPPLY LINK]</span></span></span><svg class="ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="doc-card reveal" href="disclosures.html#crs"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg><span><strong>Form CRS</strong><span><span class="ph">[CLIENT TO SUPPLY LINK]</span></span></span><svg class="ic-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</div></section>
+<section class="cta-band">
+  <div class="bg" aria-hidden="true"><img src="assets/band-window-1200.webp" srcset="assets/band-window-1200.webp 1200w, assets/band-window-2400.webp 2400w" sizes="100vw" alt="" width="2400" height="1600" loading="lazy" decoding="async"></div>
+  <div class="wrap cta-inner">
+    <div><h2>Ready to talk through your plans?</h2><p>An introductory call takes about 30 minutes, in our office or by video. Bring your questions; nothing is sold on the call.</p><p class="fee-line on-dark"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v16M7 20h10M5 8h14M5 8l-2.5 5h5zM19 8l-2.5 5h5z"/></svg><span><strong>How we're paid:</strong> <span class="ph">[FEE MODEL — CONFIRM]</span> · <a href="fees.html">See fees</a></span></p></div>
+    <a class="btn btn-primary btn-lg" href="introductory-call.html">Book an introductory call</a>
+  </div>
+</section>
 
 </main>
 <footer class="site-footer"><div class="wrap">
   <div class="foot-grid">
-    <div><h2>Contact</h2><ul>
-      <li><span class="ph">[PHONE — PLACEHOLDER]</span></li><li><span class="ph">[EMAIL — PLACEHOLDER]</span></li>
-      <li><span class="ph">[CONTACT HOURS — CONFIRM]</span></li><li><span class="ph">[CITY]</span>, <span class="ph">[STATE]</span></li></ul></div>
-    <div><h2>Pages</h2><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="fees.html">How we are paid</a></li><li><a href="disclosures.html">Disclosures</a></li><li><a href="about.html">About</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li><li><a href="introductory-call.html">Book an introductory call</a></li></ul></div>
+    <div class="foot-brand"><a class="brand on-dark" href="index.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 22h22l-3.4 5H8.4z" fill="currentColor"/><path d="M16 4v17M16 5l8.5 14H16M16 8.5 9.5 19H16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span class="bw"><span class="bw1">Carrack</span><span class="bw2">Advisory</span></span></a>
+      <p>Financial planning and investment advice from a small office on Corliss Street, for individuals, families and owners of small businesses.</p>
+      <div class="foot-soc"><a class="soc" href="#" aria-label="LinkedIn (placeholder link)"><span aria-hidden="true">in</span></a><a class="soc" href="#" aria-label="Facebook (placeholder link)"><span aria-hidden="true">f</span></a><a class="soc" href="#" aria-label="YouTube (placeholder link)"><span aria-hidden="true">▶</span></a></div></div>
+    <div><h2>Quick links</h2><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="fees.html">How we're paid</a></li><li><a href="disclosures.html">Disclosures</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h2>Services</h2><ul><li><a href="services.html#planning">Financial planning</a></li><li><a href="services.html#investment">Investment advice</a></li><li><a href="services.html#retirement">Retirement planning</a></li><li><a href="services.html#tax-aware">Tax-aware planning</a></li><li><a href="services.html#family">Family &amp; education</a></li></ul></div>
     <div><h2>Documents</h2><ul>
-      <li><a href="disclosures.html#adv">Form ADV Part 2A <span class="ph">[CLIENT TO SUPPLY LINK]</span></a></li>
-      <li><a href="disclosures.html#crs">Form CRS <span class="ph">[CLIENT TO SUPPLY LINK]</span></a></li>
-      <li><a href="disclosures.html#privacy-notice">Privacy notice <span class="ph">[CLIENT TO SUPPLY]</span></a></li>
-      <li><a href="fees.html#agreement">Advisory agreement <span class="ph">[CONFIRM]</span></a></li></ul></div>
-    <div><h2>Legal</h2><ul><li><a href="privacy.html">Privacy (draft)</a></li><li><a href="terms.html">Terms (draft)</a></li><li><a href="disclosures.html">Disclosures</a></li></ul></div>
+      <li><a href="disclosures.html#adv">Form ADV Part 2A</a></li>
+      <li><a href="disclosures.html#crs">Form CRS</a></li>
+      <li><a href="disclosures.html#privacy-notice">Client privacy notice</a></li>
+      <li><a href="disclosures.html#disclosures">Disclosures</a></li></ul></div>
+    <div><h2>Contact us</h2><ul class="foot-contact">
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>212 Corliss Street, Suite 400<br>Alderbrook, Oregon</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3.5h3l1.5 4-2 1.3a10 10 0 0 0 6.2 6.2l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2z"/></svg><a href="tel:+15550142290">(555) 014-2290</a></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg><a href="mailto:hello@carrackadvisory.example">hello@carrackadvisory.example</a></li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Mon–Fri · 9:00–5:30</span></li></ul></div>
   </div>
   <div class="disclosure-slot" id="footer-disclosures"><span class="label">Disclosures</span>
-    <p><span class="ph">[DISCLOSURES — COMPLIANCE OFFICER TO SUPPLY, VERBATIM]</span> — registration-status language, risk disclosure and state-registration notice, rendered here at full body size.</p></div>
-  <p class="foot-demo">DEMO — ThinkFirst Studios · [Your name here] · Carrack Advisory is fictional. No real firm or person is depicted.</p>
+    <p><span class="ph">[REGISTRATION STATUS — CONFIRM: RIA (STATE OR SEC) / BROKER-DEALER REP / INSURANCE PRODUCER]</span> · <span class="ph">[CRD / SEC FILE NUMBER — CONFIRM]</span></p>
+    <p><span class="ph">[DISCLOSURES — COMPLIANCE OFFICER TO SUPPLY, VERBATIM]</span> — registration-status language, risk disclosure and state-registration notice, shown here at full body size.</p></div>
+  <div class="foot-bottom"><p>© 2026 Carrack Advisory. Carrack Advisory is fictional; no real firm or person is depicted.</p>
+    <p><a href="privacy.html">Privacy policy</a><span aria-hidden="true"> · </span><a href="terms.html">Terms of service</a></p></div>
+  <p class="foot-demo">DEMO — ThinkFirst Studios · [Your name here]</p>
 </div></footer>
 <div class="sticky-bar" aria-label="Quick actions">
-  <a class="btn btn-primary" href="introductory-call.html">Book an introductory call</a>
-  <a class="btn btn-outline" href="disclosures.html">Form ADV &amp; CRS</a>
-  <a class="btn btn-outline" href="tel:+10000000000" aria-label="Call [PHONE — PLACEHOLDER]">Call</a>
+  <a class="btn btn-primary" href="introductory-call.html">Book a call</a>
+  <a class="btn btn-outline" href="fees.html">Fees</a>
+  <a class="btn btn-outline" href="tel:+15550142290" aria-label="Call (555) 014-2290">Call</a>
 </div>
 <script src="script.js"></script>
 </body>
