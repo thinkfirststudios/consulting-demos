@@ -431,3 +431,6 @@ ul.list{padding-left:1.25rem}ul.list li{margin:.35rem 0}
   .site-header .wrap{min-height:62px}
   .sticky-bar{transform:none}
 }
+
+/* Hero photo: clip the zoom to its panel and feather the left edge so no seam shows during or after the animation */
+@media (min-width:960px){.hero-photo{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}}

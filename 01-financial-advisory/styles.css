@@ -437,3 +437,6 @@ table.fee tbody tr:hover{background:var(--fa-madder-tint)}
 }
 
 @media (max-width:479px){.demo-marker{font-size:.6875rem;letter-spacing:.02em;padding:0 .55rem}}
+
+/* Hero photo: clip the zoom to its panel and feather the left edge so no seam shows during or after the animation */
+@media (min-width:960px){.hero-photo{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}}
