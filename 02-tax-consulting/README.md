@@ -4,7 +4,7 @@ Static HTML/CSS/JS. No build step. Open `index.html`.
 
 Layout follows consulting-ref-02 (structure only): thin top bar, header over a dark photographic hero, approach split,
 light / accent / dark feature cards with notched tabs, who-we-are collage with two panels, services. Colours stay 02's own —
-manila, moss and ink, with deep moss in the dark role and a muted sage in the accent role. No lime, navy, blue or gold.
+manila, lime and ink, with deep lime in the dark role and bright lime in the accent role. No navy, blue or gold.
 
 ## Fictional details
 Name, address (418 Alder Street, Kestrel Falls), (555) phone numbers, the `spanworth.example` email, hours, founding year,
